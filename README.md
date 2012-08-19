@@ -1,4 +1,13 @@
-alphamail-nodejs-client
-=======================
+Comfirm AlphaMail Node.js Client
+================================
+Use this library to connect your Node.js application to the AlphaMail system. 
+Start sending transactional e-mail today without the hassle of SMTP and large blocks of unmaintainable HTML.
 
-Node.js client for sending transactional e-mail with AlphaMail
+AlphaMail supports templating (Comlang), DKIM-signatures and reliable delivery. Beside that, we got awesome statistics.
+
+http://www.comfirm.se/
+
+
+Install the module with NPM:
+
+  $ npm install alphamail
