@@ -10,4 +10,4 @@ http://www.comfirm.se/
 
 Install the module with NPM:
 
-  $ npm install alphamail
+    $ npm install alphamail
