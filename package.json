@@ -3,7 +3,7 @@
     "description": "Client library for sending transactional e-mail through AlphaMail",
     "version": "0.5.0",
     "homepage": "http://github.com/comfirm/alphamail-nodejs-client",
-    "keywords": ["e-mail", "transactional email", ""],
+    "keywords": ["e-mail", "transactional email"],
     "author": "Robin Orheden <robin@comfirm.se>",
     "main": "./lib/alphamail",
     "directories": {
@@ -20,7 +20,6 @@
     "engines": {
         "node": ">=0.4.0"
     },
-    "preferGlobal": true,
     "licenses": [{
         "type": "MIT"
     }]
