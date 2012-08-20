@@ -33,7 +33,7 @@ var emailService = new alphamail.EmailService()
 
 var message = {
     content: "Some text that I want to have in my mail",
-    other_content: "Other text that I want to have in my mail",
+    other_content: "Other text that I want to have in my mail"
 };
 
 var payload = new alphamail.EmailMessagePayload()
