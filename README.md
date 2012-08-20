@@ -8,6 +8,6 @@ AlphaMail supports templating (Comlang), DKIM-signatures and reliable delivery. 
 http://www.comfirm.se/
 
 
-Install the module with NPM:
+Install with NPM:
 
     $ npm install alphamail
