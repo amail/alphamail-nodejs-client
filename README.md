@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/comfirm/alphamail-nodejs-client.png)](http://travis-ci.org/comfirm/alphamail-nodejs-client)
 Comfirm AlphaMail Node.js Client
 ================================
 Use this library to connect your Node.js application to the AlphaMail system. 
