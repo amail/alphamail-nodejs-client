@@ -5,17 +5,33 @@ Start sending transactional e-mail today without the hassle of SMTP and large bl
 
 AlphaMail supports templating (Comlang), DKIM-signatures and reliable delivery. Beside that, we got awesome statistics.
 
-http://alphamail.io/
+http://amail.io/
 
 
 1) Install with NPM:
 
     $ npm install alphamail
 
-2) Signup up:
+2) Sign Up:
 
     http://amail.io/
 
 3) Send your first mail! See code example on GIST below:
-
-    https://gist.github.com/typerandom/5274356
+    
+    var alphamail = require('alphamail');
+    var emailService = new alphamail.EmailService("API-TOKEN");
+     
+    var data = {name:"Joe", pwns:true, likesCats:"certainly"};
+    var payload = new alphamail.EmailMessagePayload()
+        .setProjectId(1235) // ID of your AlphaMail project
+        .setSender(new alphamail.EmailContact("My Company", "your@domain.com"))
+        .setReceiver(new alphamail.EmailContact("Some dude", "receiver@some55-domain.com"))
+        .setBodyObject(data);
+     
+    emailService.queue(payload, function(error, result){
+        if(error){
+            console.log(error);
+            return;
+        }
+        console.log("Email sent! ID = " + result);
+    });
