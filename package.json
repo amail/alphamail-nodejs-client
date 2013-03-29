@@ -1,7 +1,7 @@
 {
     "name": "alphamail",
     "description": "Client library for sending transactional e-mail through AlphaMail",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "homepage": "http://github.com/comfirm/alphamail-nodejs-client",
     "keywords": ["e-mail", "email", "mail", "smtp", "transactional email", "send email"],
     "author": "Robin Orheden <robin@amail.io>",
