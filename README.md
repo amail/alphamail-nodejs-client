@@ -16,7 +16,7 @@ http://amail.io/
 
     http://amail.io/
 
-3) Send your first mail! See code example on GIST below:
+3) Send your first mail!
     
     var alphamail = require('alphamail');
     var emailService = new alphamail.EmailService("API-TOKEN");
