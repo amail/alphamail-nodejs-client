@@ -30,7 +30,7 @@ var alphamail = require('alphamail');
 // Step #1: Let's start by entering the web service URL and the API-token you've been provided
 // If you haven't gotten your API-token yet. Log into AlphaMail or contact support at 'support@comfirm.se'.
 var emailService = new alphamail.EmailService()
-    .setServiceUrl("http://api.amail.io/v1/")
+    .setServiceUrl("http://api.amail.io/v2/")
     .setApiToken("YOUR-ACCOUNT-API-TOKEN-HERE");
 
 // Step #2: Let's create a message with the data we want to use in our template
@@ -43,7 +43,7 @@ var message = {
 
 // Step #3: Let's set up everything that is specific for delivering this email
 var payload = new alphamail.EmailMessagePayload()
-    .setProjectId(2) // The id of the project your want to send with
+    .setProjectId(12345) // The id of the project your want to send with
     .setSender(new alphamail.EmailContact("Sender Company Name", "your-sender-email@your-sender-domain.com"))
     .setReceiver(new alphamail.EmailContact("Joe E. Receiver", "email-of-receiver@comfirm.se"))
     .setBodyObject(message);

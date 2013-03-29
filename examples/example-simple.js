@@ -25,21 +25,29 @@ THE SOFTWARE.
 // In doubt or experiencing problems?
 // Please email our support at 'support@comfirm.se'
 
+// If missing, run # npm install alphamail
 var alphamail = require('alphamail');
-
-var emailService = new alphamail.EmailService()
-    .setServiceUrl("http://api.amail.io/v1/")
-    .setApiToken("YOUR-ACCOUNT-API-TOKEN-HERE");
+var emailService = new alphamail.EmailService("YOUR-ACCOUNT-API-TOKEN-HERE");
 
 var message = {
-    content: "Some text that I want to have in my mail",
-    other_content: "Other text that I want to have in my mail"
+    user: {
+        id: 12345,
+        username: "jdoe75",
+        firstName: "John",
+        lastName: "Doe"
+    }
 };
 
 var payload = new alphamail.EmailMessagePayload()
-    .setProjectId(2) // The id of the project your want to send with
-    .setSender(new alphamail.EmailContact("Sender Company Name", "your-sender-email@your-sender-domain.com"))
-    .setReceiver(new alphamail.EmailContact("Joe E. Receiver", "email-of-receiver@comfirm.se"))
+    .setProjectId(12345) // ID of your project
+    .setSender(new alphamail.EmailContact("My Company", "your@domain.com"))
+    .setReceiver(new alphamail.EmailContact("Some dude", "receiver@some55-domain.com"))
     .setBodyObject(message);
 
-emailService.queue(payload);
+emailService.queue(payload, function(error, result){
+    if(error){
+        console.log(error);
+    }else{
+        console.log("Mail successfully sent! ID = " + result);
+    }
+});

@@ -1,21 +1,21 @@
 {
     "name": "alphamail",
     "description": "Client library for sending transactional e-mail through AlphaMail",
-    "version": "0.7.0",
+    "version": "1.0.3",
     "homepage": "http://github.com/comfirm/alphamail-nodejs-client",
-    "keywords": ["e-mail", "email", "mail", "smtp", "transactional email", "comfirm"],
-    "author": "Robin Orheden <robin@comfirm.se>",
+    "keywords": ["e-mail", "email", "mail", "smtp", "transactional email", "send email"],
+    "author": "Robin Orheden <robin@amail.io>",
     "main": "./lib/alphamail",
     "company":{
         "name": "Comfirm",
         "product": "AlphaMail",
-        "homepage": "http://www.comfirm.se/"
+        "homepage": "http://amail.io/"
     },
     "directories": {
         "lib": "./lib/alphamail"
     },
     "bugs": {
-        "mail": "robin@comfirm.se",
+        "mail": "robin@amail.io",
         "url": "http://github.com/comfirm/alphamail-nodejs-client/issues"
     },
     "repository": {
