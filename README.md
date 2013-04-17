@@ -87,15 +87,37 @@ Queue an email for sending
 
 ## Documentation (v1.1.4)
 
-### EmailContact
+### EmailService
+
+```var emailService = new alphamail.EmailService("MY-ALPHAMAIL-API-TOKEN");```
 
 #### Constructor
 
-var contact = new alphamail.EmailContact(string name, string email[, string id]);
+alphamail.EmailService(string token)
+>setting parameter 'token' is the same as calling emailService.setApiToken(token);
 
->setting name is same as contact.setName(name);<br />
->setting email is same as contact.setEmail(email);<br />
->setting id is same as contact.setIdentity(id);
+#### Methods
+
+* EmailService setServiceUrl(string url)
+>Set the base service url. Default when not called: 'http://api.amail.io/v2/'
+
+* EmailService setApiToken(string token)
+>Set the API token to authenticate with.
+
+* EmailService queue(EmailMessagePayload message[, function callback])
+>Queue an email for sending.
+
+### EmailContact
+
+```var contact = new alphamail.EmailContact("Some Guy", "some@guy.com");```
+
+#### Constructor
+
+alphamail.EmailContact(name, email[, id]);
+
+>setting parameter 'name' is same as calling contact.setName(name);<br />
+>setting parameter 'email' is same as calling contact.setEmail(email);<br />
+>setting optional parameter 'id' is same as calling contact.setIdentity(id);
 
 #### Methods
 
@@ -119,9 +141,11 @@ var contact = new alphamail.EmailContact(string name, string email[, string id])
 
 ### EmailMessagePayload
 
+```var payload = new alphamail.EmailMessagePayload();```
+
 #### Constructor
 
-var payload = new alphamail.EmailMessagePayload();
+alphamail.EmailMessagePayload()
 
 #### Methods
 
