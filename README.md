@@ -59,9 +59,9 @@ Include the module
 
 Initialize an email service with your token
 
-<sub><i>Don't have a token? Head to http://amail.io/ and signup for a free AlphaMail account.</i></sub>
-
     var emailService = new alphamail.EmailService(apiToken);
+    
+<sub><i>Where apiToken is your AlphaMail token. Don't have a token? Head to http://amail.io/ and signup for a free AlphaMail account.</i></sub>
     
 Queue an email for sending
 
