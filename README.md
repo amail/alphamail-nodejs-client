@@ -85,7 +85,7 @@ Queue an email for sending
         }
     };
 
-## Documentation (v1.1.4)
+## Documentation
 
 ### EmailService
 
@@ -94,6 +94,7 @@ Queue an email for sending
 #### Constructor
 
 alphamail.EmailService(string token)
+
 >setting parameter 'token' is the same as calling emailService.setApiToken(token);
 
 #### Methods
@@ -104,8 +105,17 @@ alphamail.EmailService(string token)
 * EmailService setApiToken(string token)
 >Set the API token to authenticate with.
 
-* EmailService queue(EmailMessagePayload message[, function callback])
+* EmailService queue(EmailMessagePayload payload[, function callback])
 >Queue an email for sending.
+```
+    emailService.queue(payload, function(error, result){
+        if(error){
+            console.log(error);
+        }else{
+            console.log("Mail successfully sent! ID = " + result);
+        }
+    });
+```
 
 ### EmailContact
 
@@ -113,7 +123,7 @@ alphamail.EmailService(string token)
 
 #### Constructor
 
-alphamail.EmailContact(name, email[, id]);
+alphamail.EmailContact(string name, string email[, string id]);
 
 >setting parameter 'name' is same as calling contact.setName(name);<br />
 >setting parameter 'email' is same as calling contact.setEmail(email);<br />
@@ -154,7 +164,6 @@ alphamail.EmailMessagePayload()
 
 * EmailMessagePayload setProjectId(integer projectId)
 >Set the identity of the AlphaMail Project to send with.
->Set the EmailContact to send with. I.e. this should be your sender email/name.
 ```
     payload.setProjectId(12345);
 ```
