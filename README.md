@@ -210,3 +210,19 @@ alphamail.EmailMessagePayload()
         sso_url: "http://domain.com/login/ABC-123-456-789-000-FFF/"
     });
 ```
+
+## Error Handling
+
+All errors created by this module are instances of the JavaScript Error object.
+When returned by a service, the error object is decorated with the property 'code'.
+In callbacks, the error parameter is always the first parameter (as shown below).
+
+```
+function(error, result){
+    if(error){
+        console.log(error.name);
+        console.log(error.message);
+        console.log(error.code); // Only present in the context of a service
+    }
+}
+```
