@@ -100,21 +100,50 @@ var payload = new alphamail.EmailMessagePayload();
 
 * EmailMessagePayload setProjectId(integer projectId)
 >Set the identity of the AlphaMail Project to send with.
+>Set the EmailContact to send with. I.e. this should be your sender email/name.
+```
+    payload.setProjectId(12345);
+```
 
 * EmailContact getSender()
 >Get the EmailContact to send with.
 
 * EmailMessagePayload setSender(EmailContact sender)
 >Set the EmailContact to send with. I.e. this should be your sender email/name.
+```
+    payload.setSender(
+        new alphamail.EmailContact(
+            "Your Company", // Name
+            "you@domain.com" // Email
+        )
+    );
+```
 
 * string getReceiver()
 >Get the EmailContact to send to.
 
 * EmailMessagePayload setReceiver(EmailContact receiver)
 >Set the EmailContact to send to. I.e. this should be the email/name that you want to send to.
+```
+    payload.setReceiver(
+        new alphamail.EmailContact(
+            "John Wayne", // Name
+            "john@wayne.com", // Email
+            "jwayne1979" // Optional identifier
+        )
+    );
+```
 
 * object getBodyObject()
 >Get the payload data.
 
 * EmailMessagePayload setBodyObject(object body)
 >Set the payload data. This is the data that you'll use in AlphaMail to format your email.
+```
+    payload.setBodyObject({
+        id: "abc-123-456",
+        name: "Some Guy",
+        profile_url: "http://domain.com/profile/ABC-123-456/",
+        sso_url: "http://domain.com/login/ABC-123-456-789-000-FFF/"
+    });
+```
