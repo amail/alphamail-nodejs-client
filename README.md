@@ -87,6 +87,35 @@ Queue an email for sending
 
 ## Documentation (v1.1.4)
 
+### EmailContact
+
+#### Constructor
+
+var contact = new alphamail.EmailContact(string name, string email[, string id]);
+>Where name is same as contact.setName(name);
+>Where email is same as contact.setEmail(email);
+>Where id is same as contact.setIdentity(id);
+
+#### Methods
+
+* string getName()
+> Get the name of the contact.
+
+* EmailContact setName(string name)
+> Set the name of the contact. E.g. 'John Snow'
+
+* string getEmail()
+> Get the email of the contact.
+
+* EmailContact setEmail(string email)
+> Set the email of the contact. E.g. 'john.snow@nightswatch.gov'
+
+* string getIdentity()
+> Get the identity of the contact.
+
+* EmailContact setIdentity(string id)
+> Set the identity of the contact. Note! Currently only handled when setting a receiver contact.
+
 ### EmailMessagePayload
 
 #### Constructor
