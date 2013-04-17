@@ -7,7 +7,7 @@ AlphaMail supports templating (Comlang), DKIM-signatures and reliable delivery. 
 
 http://amail.io/
 
-### How to start?
+## How to start?
 
 1) Install with NPM:
 
@@ -51,7 +51,7 @@ http://amail.io/
         console.log("Email sent! ID = " + result);
     });
     
-### Usage
+## Usage
 
 Include the module
 
@@ -84,3 +84,37 @@ Queue an email for sending
             console.log("Mail successfully sent! ID = " + result);
         }
     };
+
+## Documentation (v1.1.4)
+
+### EmailMessagePayload
+
+#### Constructor
+
+var payload = new alphamail.EmailMessagePayload();
+
+#### Methods
+
+* integer getProjectId()
+>Get the identity of the AlphaMail Project to send with.
+
+* EmailMessagePayload setProjectId(integer projectId)
+>Set the identity of the AlphaMail Project to send with.
+
+* EmailContact getSender()
+>Get the EmailContact to send with.
+
+* EmailMessagePayload setSender(EmailContact sender)
+>Set the EmailContact to send with. I.e. this should be your sender email/name.
+
+* string getReceiver()
+>Get the EmailContact to send to.
+
+* EmailMessagePayload setReceiver(EmailContact receiver)
+>Set the EmailContact to send to. I.e. this should be the email/name that you want to send to.
+
+* object getBodyObject()
+>Get the payload data.
+
+* EmailMessagePayload setBodyObject(object body)
+>Set the payload data. This is the data that you'll use in AlphaMail to format your email.
