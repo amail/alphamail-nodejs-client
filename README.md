@@ -249,7 +249,7 @@ alphamail.Logger.log = function(message){
 someVariable.toString("utf8");
 ```
 
-### Can I use multiple recipients
+### Can I use multiple recipients?
 
 >Since the AlphaMail API is a "transactional only" API, support for multiple recipients is currently not available.<br />
 >But this feature is planned!
