@@ -92,9 +92,10 @@ Queue an email for sending
 #### Constructor
 
 var contact = new alphamail.EmailContact(string name, string email[, string id]);
->Where name is same as contact.setName(name);
->Where email is same as contact.setEmail(email);
->Where id is same as contact.setIdentity(id);
+
+>setting name is same as contact.setName(name);<br />
+>setting email is same as contact.setEmail(email);<br />
+>setting id is same as contact.setIdentity(id);
 
 #### Methods
 
