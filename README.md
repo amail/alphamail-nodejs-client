@@ -89,6 +89,8 @@ Queue an email for sending
 
 ### EmailService
 
+>Service used to queue and retrieve information about emails.
+
 ```var emailService = new alphamail.EmailService("MY-ALPHAMAIL-API-TOKEN");```
 
 #### Constructor
@@ -118,6 +120,8 @@ alphamail.EmailService(string token)
 ```
 
 ### EmailContact
+
+>Entity that holds Sender/Receiver data such as name and email.
 
 ```var contact = new alphamail.EmailContact("Some Guy", "some@guy.com");```
 
@@ -150,6 +154,8 @@ alphamail.EmailContact(string name, string email[, string id]);
 > Set the identity of the contact. Note! Currently only handled when setting a receiver contact.
 
 ### EmailMessagePayload
+
+>Entity that holds data used when queueing a new email.
 
 ```var payload = new alphamail.EmailMessagePayload();```
 
