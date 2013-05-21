@@ -1,3 +1,4 @@
+/*
 The MIT License
 
 Copyright (c) Robin Orheden, 2013 <http://amail.io/>
@@ -19,3 +20,34 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+*/
+
+// In doubt or experiencing problems?
+// Please email our support at 'support@comfirm.se'
+
+// If missing, run # npm install alphamail
+var alphamail = require('alphamail');
+var emailService = new alphamail.EmailService("YOUR-ACCOUNT-API-TOKEN-HERE");
+
+var message = {
+    user: {
+        id: 12345,
+        username: "jdoe75",
+        firstName: "John",
+        lastName: "Doe"
+    }
+};
+
+var payload = new alphamail.EmailMessagePayload()
+    .setProjectId(12345) // ID of your project
+    .setSender(new alphamail.EmailContact("My Company", "your@domain.com"))
+    .setReceiver(new alphamail.EmailContact("Some dude", "receiver@some55-domain.com"))
+    .setBodyObject(message);
+
+emailService.queue(payload, function(error, result){
+    if(error){
+        console.log(error);
+    }else{
+        console.log("Mail successfully sent! ID = " + result);
+    }
+});
